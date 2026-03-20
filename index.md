@@ -287,7 +287,7 @@ This works with any publicly accessible URL — research data repositories, gove
 
 - **TACC Documentation**: https://docs.tacc.utexas.edu/
 - **TACC Support Ticket**: https://portal.tacc.utexas.edu/tacc-consulting
-- **Allocation Questions**: Contact Ashley Scruse (allocation manager) — [ashley.scruse@morehouse.edu](mailto:ashley.scruse@morehouse.edu)
+- **Allocation Questions**: Contact Ashley Scruse — [ashley.scruse@morehouse.edu](mailto:ashley.scruse@morehouse.edu)
 
 ---
 
