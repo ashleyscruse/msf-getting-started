@@ -5,7 +5,7 @@
 
 // Morehouse College colors: Maroon and White
 .page-header {
-  background-image: linear-gradient(120deg, #800000, #5c0000);
+  background-image: linear-gradient(120deg, #4a0000, #800000, #4a0000);
 }
 
 .main-content {
@@ -23,12 +23,12 @@
 }
 
 .btn {
-  border-color: #800000;
-  color: #800000;
+  border-color: #fff;
+  color: #fff;
 
   &:hover {
-    background-color: #800000;
-    color: #fff;
-    border-color: #800000;
+    background-color: #fff;
+    color: #800000;
+    border-color: #fff;
   }
 }
