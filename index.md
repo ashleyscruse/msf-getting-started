@@ -90,14 +90,14 @@ Use one of these SSH clients:
 
 ### System Hostnames
 
-| System    | Hostname      |
-| --------- | ------------- |
-| Lonestar6 | `ls6`       |
-| Frontera  | `frontera`  |
-| Stampede3 | `stampede3` |
-| Vista     | `vista`     |
+| System    | Hostname      | Details |
+| --------- | ------------- | ------- |
+| Lonestar6 | `ls6`       | [System specs](https://docs.tacc.utexas.edu/hpc/lonestar6/) |
+| Frontera  | `frontera`  | [System specs](https://docs.tacc.utexas.edu/hpc/frontera/) |
+| Stampede3 | `stampede3` | [System specs](https://docs.tacc.utexas.edu/hpc/stampede3/) |
+| Vista     | `vista`     | [System specs](https://docs.tacc.utexas.edu/hpc/vista/) |
 
-> Ask the allocation manager which system you should use if you're unsure.
+> Not sure which system to use? Check the system specs linked above to see which one fits your workload.
 
 ---
 
