@@ -24,7 +24,7 @@ Common issues and how to fix them.
 
 ### I created my account on the TACC portal instead of using the invitation link
 
-Your account exists, but it's not connected to the MSF allocation. Contact the allocation manager (Ashley Scruse) to manually add your account to the project.
+Your account exists, but it's not connected to the MSCF allocation. Contact the allocation manager (Ashley Scruse) to manually add your account to the project.
 
 ---
 

@@ -2,9 +2,9 @@
 layout: default
 title: Getting Started
 ---
-# Getting Started with the Morehouse Supercomputing Facility (MSF)
+# Getting Started with the Morehouse Supercomputing Facility (MSCF)
 
-Welcome to MSF! While we build out our own supercomputing infrastructure, we are using resources at the **Texas Advanced Computing Center (TACC)** to provide HPC access to our researchers. MSF is not hosted at TACC — TACC is a partner providing compute time while our facility is under development.
+Welcome to MSCF! While we build out our own supercomputing infrastructure, we are using resources at the **Texas Advanced Computing Center (TACC)** to provide HPC access to our researchers. MSCF is not hosted at TACC — TACC is a partner providing compute time while our facility is under development.
 
 This guide walks you through everything you need to get set up on TACC and run your first job.
 

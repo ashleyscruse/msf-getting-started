@@ -1,12 +1,12 @@
-# MSF Getting Started
+# MSCF Getting Started
 
-Onboarding documentation for the **Morehouse Supercomputing Facility (MSF)**, hosted at the [Texas Advanced Computing Center (TACC)](https://www.tacc.utexas.edu/).
+Onboarding documentation for the **Morehouse Supercomputing Facility (MSCF)**, hosted at the [Texas Advanced Computing Center (TACC)](https://www.tacc.utexas.edu/).
 
-This repo contains everything new users need to get set up on MSF's HPC resources, and everything administrators need to manage the onboarding process.
+This repo contains everything new users need to get set up on MSCF's HPC resources, and everything administrators need to manage the onboarding process.
 
 ## For New Users
 
-Visit the **[Getting Started Guide](https://YOUR-USERNAME.github.io/msf-getting-started/)** to:
+Visit the **[Getting Started Guide](https://morehouse-supercomputing.github.io/mscf-getting-started/)** to:
 
 - Create your TACC account
 - Set up multi-factor authentication
@@ -32,7 +32,7 @@ The [admin/](admin/) folder contains:
 
 This repo is configured with GitHub Pages. The getting started guide is published at:
 
-`https://YOUR-USERNAME.github.io/msf-getting-started/`
+`https://morehouse-supercomputing.github.io/mscf-getting-started/`
 
 To enable: go to **Settings > Pages** and set the source to the `main` branch.
 
