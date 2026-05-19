@@ -5,7 +5,81 @@ title: Troubleshooting
 
 # Troubleshooting & FAQ
 
-Common issues and how to fix them.
+Common issues and how to fix them. Windows-specific issues are grouped together at the top because they come up most often in workshops. The Account & Login, Jobs & Slurm, and File System sections below apply to every operating system.
+
+---
+
+## Windows-Specific Issues
+
+### "ssh : The term 'ssh' is not recognized" in PowerShell
+
+**Error:**
+```
+ssh : The term 'ssh' is not recognized as the name of a cmdlet, function,
+script file, or operable program.
+```
+
+**Cause:** The OpenSSH Client feature is not turned on. SSH ships with Windows 10/11 but is not always enabled by default.
+
+**Fix:** Open **Settings > Apps > Optional Features > Add a feature**, search for **OpenSSH Client**, check it, and click **Install**. Close PowerShell, reopen it, and try the `ssh` command again.
+
+Or, run PowerShell **as Administrator** and execute:
+```powershell
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+```
+
+If your IT department blocks installing OpenSSH, download [MobaXterm](https://mobaxterm.mobatek.net/) instead and use it for SSH.
+
+### Password and MFA prompts show nothing when I type
+
+This is normal. PowerShell, MobaXterm, and PuTTY all hide password input on purpose. There are no asterisks or dots. Type your password, press Enter, then type your MFA token, press Enter. Take your time and type carefully.
+
+### "Batch script contains DOS line breaks (\\r\\n)" when running sbatch
+
+**Error:**
+```
+sbatch: error: Batch script contains DOS line breaks (\r\n)
+sbatch: error: instead of expected UNIX line breaks (\n).
+```
+
+**Cause:** You created your `.sh` job script on Windows (likely in Notepad), which saves files with Windows-style line endings. Linux and Slurm expect Unix-style line endings.
+
+**Fix on TACC:**
+```bash
+dos2unix my_script.sh
+```
+
+If `dos2unix` is not available on your system:
+```bash
+sed -i 's/\r$//' my_script.sh
+```
+
+**Prevent it next time:** edit job scripts directly on TACC with `nano my_script.sh`, or in VS Code on Windows switch the line endings indicator at the bottom-right of the status bar from `CRLF` to `LF` before saving.
+
+### scp from PowerShell can't find my Windows file
+
+**Cause:** Path syntax mismatch. The Windows side of an `scp` command needs backslashes (`\`), and the TACC side needs forward slashes (`/`). It's easy to get them backwards.
+
+**Fix:** Use this pattern:
+```powershell
+scp C:\Users\YourName\Documents\file.txt user@ls6.tacc.utexas.edu:/work2/0xxxx/user/
+```
+
+If the path contains spaces, wrap it in double quotes:
+```powershell
+scp "C:\Users\Your Name\My Project\file.txt" user@ls6.tacc.utexas.edu:/work2/0xxxx/user/
+```
+
+### "Host key verification failed" after TACC maintenance
+
+**Cause:** The server's host key changed (this happens occasionally after major maintenance), and your machine still has the old key cached.
+
+**Fix:**
+```powershell
+ssh-keygen -R ls6.tacc.utexas.edu
+```
+
+Replace `ls6` with the hostname you were trying to reach. Then try `ssh` again. You'll be re-prompted to accept the new host key.
 
 ---
 
